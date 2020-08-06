@@ -1,0 +1,14 @@
+D:\Projetos VSCODE\Barbearia\Barbearia\bin\Debug\Barbearia.exe.config
+D:\Projetos VSCODE\Barbearia\Barbearia\bin\Debug\Barbearia.exe
+D:\Projetos VSCODE\Barbearia\Barbearia\bin\Debug\Barbearia.pdb
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.csprojAssemblyReference.cache
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.FormCustomer.resources
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.FormMain.resources
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.Properties.Resources.resources
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.csproj.GenerateResource.cache
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.exe
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.pdb
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.FormCustomerChoice.resources
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.FormListCustomer.resources
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.FormNotes.resources
+D:\Projetos VSCODE\Barbearia\Barbearia\obj\Debug\Barbearia.FormPayment.resources
