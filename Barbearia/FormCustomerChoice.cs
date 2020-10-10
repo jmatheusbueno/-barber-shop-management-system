@@ -19,7 +19,7 @@ namespace Barbearia
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            FormCustomer frm = new FormCustomer();
+            FormCustomerData frm = new FormCustomerData();
             frm.Show();
             this.Close();
         }

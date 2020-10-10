@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Barbearia
 {
-    public partial class FormNotes : Form
+    public partial class FormNoteData : Form
     {
-        public FormNotes()
+        public FormNoteData()
         {
             InitializeComponent();
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            FormNoteData frm = new FormNoteData();
-            frm.Show();
         }
     }
 }

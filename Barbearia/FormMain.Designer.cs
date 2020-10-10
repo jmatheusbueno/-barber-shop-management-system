@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlBase = new System.Windows.Forms.Panel();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHours = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPayment = new System.Windows.Forms.Button();
             this.pnlBase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.pnlBase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBase.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlBase.Controls.Add(this.btnPayment);
+            this.pnlBase.Controls.Add(this.btnStock);
             this.pnlBase.Controls.Add(this.pictureBox1);
             this.pnlBase.Controls.Add(this.btnHours);
             this.pnlBase.Controls.Add(this.btnCustomer);
@@ -51,6 +51,26 @@
             this.pnlBase.Name = "pnlBase";
             this.pnlBase.Size = new System.Drawing.Size(1190, 103);
             this.pnlBase.TabIndex = 0;
+            // 
+            // btnStock
+            // 
+            this.btnStock.Location = new System.Drawing.Point(314, 38);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(86, 32);
+            this.btnStock.TabIndex = 3;
+            this.btnStock.Text = "Estoque";
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // btnHours
             // 
@@ -71,26 +91,6 @@
             this.btnCustomer.Text = "Clientes";
             this.btnCustomer.UseVisualStyleBackColor = true;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.Location = new System.Drawing.Point(314, 38);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(86, 32);
-            this.btnPayment.TabIndex = 2;
-            this.btnPayment.Text = "Finanças";
-            this.btnPayment.UseVisualStyleBackColor = true;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // FormMain
             // 
@@ -114,7 +114,7 @@
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnHours;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnPayment;
+        private System.Windows.Forms.Button btnStock;
     }
 }
 

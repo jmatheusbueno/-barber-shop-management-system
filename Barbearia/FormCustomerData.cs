@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Barbearia
 {
-    public partial class FormCustomer : Form
+    public partial class FormCustomerData : Form
     {
         public FormCustomerChoice FrmCustomerChoice { get; set; }
-        public FormCustomer()
+        public FormCustomerData()
         {
             InitializeComponent();
         }

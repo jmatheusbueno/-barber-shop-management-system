@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormCustomer.cs">
+    <Compile Include="FormCustomerData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCustomer.Designer.cs">
-      <DependentUpon>FormCustomer.cs</DependentUpon>
+    <Compile Include="FormCustomerData.Designer.cs">
+      <DependentUpon>FormCustomerData.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCustomerChoice.cs">
       <SubType>Form</SubType>
@@ -70,22 +70,34 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNoteData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNoteData.Designer.cs">
+      <DependentUpon>FormNoteData.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNotes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormNotes.Designer.cs">
       <DependentUpon>FormNotes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPayment.cs">
+    <Compile Include="FormProductData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPayment.Designer.cs">
-      <DependentUpon>FormPayment.cs</DependentUpon>
+    <Compile Include="FormProductData.Designer.cs">
+      <DependentUpon>FormProductData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStock.Designer.cs">
+      <DependentUpon>FormStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCustomer.resx">
-      <DependentUpon>FormCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="FormCustomerData.resx">
+      <DependentUpon>FormCustomerData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCustomerChoice.resx">
       <DependentUpon>FormCustomerChoice.cs</DependentUpon>
@@ -96,11 +108,17 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNoteData.resx">
+      <DependentUpon>FormNoteData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNotes.resx">
       <DependentUpon>FormNotes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPayment.resx">
-      <DependentUpon>FormPayment.cs</DependentUpon>
+    <EmbeddedResource Include="FormProductData.resx">
+      <DependentUpon>FormProductData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStock.resx">
+      <DependentUpon>FormStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace Barbearia
 {
-    partial class FormCustomer
+    partial class FormCustomerData
     {
         /// <summary>
         /// Required designer variable.

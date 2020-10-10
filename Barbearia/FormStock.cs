@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace Barbearia
 {
-    public partial class FormPayment : Form
+    public partial class FormStock : Form
     {
-        public FormPayment()
+        public FormStock()
         {
             InitializeComponent();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-
+            FormProductData frm = new FormProductData();
+            frm.Show();
         }
     }
 }

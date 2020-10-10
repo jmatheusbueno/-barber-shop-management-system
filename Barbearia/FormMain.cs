@@ -29,10 +29,11 @@ namespace Barbearia
             frm.Show();
         }
 
-        private void btnPayment_Click(object sender, EventArgs e)
+        private void btnStock_Click(object sender, EventArgs e)
         {
-            FormPayment frm = new FormPayment();
+            FormStock frm = new FormStock();
             frm.Show();
         }
+
     }
 }
