@@ -30,16 +30,16 @@
         {
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.txtCellPhone = new System.Windows.Forms.TextBox();
+            this.txtAdress = new System.Windows.Forms.TextBox();
+            this.txtAdressNumber = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lnlNumber = new System.Windows.Forms.Label();
             this.lblEnder = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblObs = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtObservation = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -62,33 +62,34 @@
             this.txtName.Size = new System.Drawing.Size(253, 20);
             this.txtName.TabIndex = 1;
             // 
-            // textBox1
+            // txtCPF
             // 
-            this.textBox1.Location = new System.Drawing.Point(67, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtCPF.Location = new System.Drawing.Point(67, 47);
+            this.txtCPF.MaxLength = 11;
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(253, 20);
+            this.txtCPF.TabIndex = 2;
             // 
-            // textBox2
+            // txtCellPhone
             // 
-            this.textBox2.Location = new System.Drawing.Point(72, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtCellPhone.Location = new System.Drawing.Point(72, 115);
+            this.txtCellPhone.Name = "txtCellPhone";
+            this.txtCellPhone.Size = new System.Drawing.Size(248, 20);
+            this.txtCellPhone.TabIndex = 3;
             // 
-            // textBox3
+            // txtAdress
             // 
-            this.textBox3.Location = new System.Drawing.Point(86, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtAdress.Location = new System.Drawing.Point(86, 141);
+            this.txtAdress.Name = "txtAdress";
+            this.txtAdress.Size = new System.Drawing.Size(154, 20);
+            this.txtAdress.TabIndex = 4;
             // 
-            // textBox4
+            // txtAdressNumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(279, 143);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(41, 20);
-            this.textBox4.TabIndex = 5;
+            this.txtAdressNumber.Location = new System.Drawing.Point(279, 143);
+            this.txtAdressNumber.Name = "txtAdressNumber";
+            this.txtAdressNumber.Size = new System.Drawing.Size(41, 20);
+            this.txtAdressNumber.TabIndex = 5;
             // 
             // lblCPF
             // 
@@ -145,13 +146,13 @@
             this.lblObs.TabIndex = 10;
             this.lblObs.Text = "Observação:";
             // 
-            // textBox5
+            // txtObservation
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 223);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(308, 81);
-            this.textBox5.TabIndex = 11;
+            this.txtObservation.Location = new System.Drawing.Point(12, 223);
+            this.txtObservation.Multiline = true;
+            this.txtObservation.Name = "txtObservation";
+            this.txtObservation.Size = new System.Drawing.Size(308, 81);
+            this.txtObservation.TabIndex = 11;
             // 
             // btnSave
             // 
@@ -161,6 +162,7 @@
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -172,7 +174,7 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // FormCustomer
+            // FormCustomerData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,21 +182,21 @@
             this.ClientSize = new System.Drawing.Size(336, 349);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtObservation);
             this.Controls.Add(this.lblObs);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblEnder);
             this.Controls.Add(this.lnlNumber);
             this.Controls.Add(this.lblCPF);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAdressNumber);
+            this.Controls.Add(this.txtAdress);
+            this.Controls.Add(this.txtCellPhone);
+            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.MaximumSize = new System.Drawing.Size(352, 388);
             this.MinimumSize = new System.Drawing.Size(352, 388);
-            this.Name = "FormCustomer";
+            this.Name = "FormCustomerData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
             this.ResumeLayout(false);
@@ -206,16 +208,16 @@
 
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.TextBox txtCellPhone;
+        private System.Windows.Forms.TextBox txtAdress;
+        private System.Windows.Forms.TextBox txtAdressNumber;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lnlNumber;
         private System.Windows.Forms.Label lblEnder;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblObs;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtObservation;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
     }
