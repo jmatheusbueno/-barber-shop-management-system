@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="object classes\Customer.cs" />
+    <Compile Include="Db.cs" />
     <Compile Include="FormCustomerData.cs">
       <SubType>Form</SubType>
     </Compile>
