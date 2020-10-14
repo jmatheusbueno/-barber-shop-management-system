@@ -61,6 +61,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(253, 20);
             this.txtName.TabIndex = 1;
+            this.txtName.Click += new System.EventHandler(this.txtName_Click);
             // 
             // txtCPF
             // 
