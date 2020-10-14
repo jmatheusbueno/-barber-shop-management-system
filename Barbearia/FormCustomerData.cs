@@ -33,10 +33,14 @@ namespace Barbearia
                 var customer = Fill();
                 Save(customer as Customer);
             }
-            else            
+            else
                 MessageBox.Show("Falha no cadastro, tente novamente", "Falha no cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+        }
 
+        private void txtName_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text == "Campo obrigatório")
+                txtName.Text = string.Empty;
         }
         #endregion
 
@@ -72,13 +76,6 @@ namespace Barbearia
 
         private void Save(Customer obj)
         {
-            string name = obj.Name;
-            string cpf = obj.CPF;
-            string cellphone = obj.Cell_Phone;
-            string address = obj.Address;
-            string addressnumber = obj.Address_Number;
-            string observation = obj.Observation;
-
             Db db = new Db();
             SqlCommand insertCommand = new SqlCommand("insert Customer(Name,CPF,Cell_Phone,Address,Address_Number,Observation) values(@name,@cpf,@cellphone,@address,@addressnumber,@observation)");
             insertCommand.Parameters.AddWithValue("@name", obj.Name);

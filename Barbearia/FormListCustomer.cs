@@ -22,5 +22,10 @@ namespace Barbearia
             FormCustomerData frm = new FormCustomerData();
             frm.Show();
         }
+
+        private void FormListCustomer_Load(object sender, EventArgs e)
+        {
+            this.customerTableAdapter.Fill(this.brutusDataSet.customer);
+        }
     }
 }
