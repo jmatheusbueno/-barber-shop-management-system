@@ -32,9 +32,9 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -56,6 +56,7 @@
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtName
             // 
@@ -75,12 +76,12 @@
             this.lblName.TabIndex = 16;
             this.lblName.Text = "Nome:";
             // 
-            // textBox1
+            // txtPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 20);
-            this.textBox1.TabIndex = 19;
+            this.txtPrice.Location = new System.Drawing.Point(66, 52);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(118, 20);
+            this.txtPrice.TabIndex = 19;
             // 
             // lblPrice
             // 
@@ -93,12 +94,12 @@
             this.lblPrice.TabIndex = 18;
             this.lblPrice.Text = "Preço:";
             // 
-            // textBox2
+            // txtQuantity
             // 
-            this.textBox2.Location = new System.Drawing.Point(288, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(75, 20);
-            this.textBox2.TabIndex = 21;
+            this.txtQuantity.Location = new System.Drawing.Point(288, 54);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(75, 20);
+            this.txtQuantity.TabIndex = 21;
             // 
             // lblQuantity
             // 
@@ -117,9 +118,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(375, 135);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.lblQuantity);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
@@ -139,9 +140,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label lblQuantity;
     }
 }
