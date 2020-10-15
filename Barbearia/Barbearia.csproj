@@ -51,6 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BrutusDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BrutusDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrutusDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="object classes\Customer.cs" />
     <Compile Include="Db.cs" />
     <Compile Include="FormCustomerData.cs">
@@ -101,6 +106,7 @@
     <Compile Include="FormStock.Designer.cs">
       <DependentUpon>FormStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="object classes\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCustomerData.resx">
@@ -147,6 +153,18 @@
     <None Include="BrutusDataSet.xss">
       <DependentUpon>BrutusDataSet.xsd</DependentUpon>
     </None>
+    <None Include="BrutusDataSet1.xsc">
+      <DependentUpon>BrutusDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BrutusDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BrutusDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrutusDataSet1.xss">
+      <DependentUpon>BrutusDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\FormProductData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -22,5 +22,11 @@ namespace Barbearia
             FormProductData frm = new FormProductData();
             frm.Show();
         }
+
+        private void FormStock_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'brutusDataSet1.product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.brutusDataSet1.product);
+        }
     }
 }
