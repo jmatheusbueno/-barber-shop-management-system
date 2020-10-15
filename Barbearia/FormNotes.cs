@@ -22,5 +22,11 @@ namespace Barbearia
             FormNoteData frm = new FormNoteData();
             frm.Show();
         }
+
+        private void FormNotes_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'brutusDataSet3.note' table. You can move, or remove it, as needed.
+            this.noteTableAdapter1.Fill(this.brutusDataSet3.note);
+        }
     }
 }
