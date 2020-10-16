@@ -16,7 +16,7 @@ namespace Barbearia
         private static SqlDataAdapter adapter = new SqlDataAdapter();
         public SqlTransaction DbTran;
 
-        private static string strConnString = "Data Source=(local);Initial Catalog=(xxx);User ID=(xxx);Password=(xxx)";
+        private static string strConnString = "Data Source=FORLOGIC490;Initial Catalog=Brutus;User ID=sa;Password=abc123##";
 
         public void createConn()
         {
