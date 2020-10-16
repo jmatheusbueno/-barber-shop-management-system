@@ -29,6 +29,12 @@ namespace Barbearia
         {
             this.customerTableAdapter.Fill(this.brutusDataSet.customer);
         }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F5)
+                this.customerTableAdapter.Fill(this.brutusDataSet.customer);
+        }
         #endregion
 
         #region Methods

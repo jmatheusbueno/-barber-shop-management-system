@@ -30,6 +30,12 @@ namespace Barbearia
             // TODO: This line of code loads data into the 'brutusDataSet3.note' table. You can move, or remove it, as needed.
             this.noteTableAdapter1.Fill(this.brutusDataSet3.note);
         }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F5)
+                this.noteTableAdapter1.Fill(this.brutusDataSet3.note);
+        }
         #endregion
 
         #region Methods

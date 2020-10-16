@@ -88,7 +88,10 @@ namespace Barbearia
 
             int row = db.executeQuery(insertCommand);
             if (row == 1)
+            {
                 MessageBox.Show("Cliente cadastrado com sucesso", "Cadastro concluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormListCustomer frm = new FormListCustomer();
+            }
             else
                 MessageBox.Show("Falha no cadastro, tente novamente", "Falha no cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
