@@ -60,14 +60,17 @@
             this.dataGridView1.DataSource = this.customerBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 64);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(775, 339);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 200;
             // 
             // cPFDataGridViewTextBoxColumn
@@ -75,6 +78,7 @@
             this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
             this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
             this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
+            this.cPFDataGridViewTextBoxColumn.ReadOnly = true;
             this.cPFDataGridViewTextBoxColumn.Width = 130;
             // 
             // cellPhoneDataGridViewTextBoxColumn
@@ -82,12 +86,14 @@
             this.cellPhoneDataGridViewTextBoxColumn.DataPropertyName = "Cell_Phone";
             this.cellPhoneDataGridViewTextBoxColumn.HeaderText = "Cell_Phone";
             this.cellPhoneDataGridViewTextBoxColumn.Name = "cellPhoneDataGridViewTextBoxColumn";
+            this.cellPhoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // observationDataGridViewTextBoxColumn
             // 
@@ -95,6 +101,7 @@
             this.observationDataGridViewTextBoxColumn.FillWeight = 200F;
             this.observationDataGridViewTextBoxColumn.HeaderText = "Observation";
             this.observationDataGridViewTextBoxColumn.Name = "observationDataGridViewTextBoxColumn";
+            this.observationDataGridViewTextBoxColumn.ReadOnly = true;
             this.observationDataGridViewTextBoxColumn.Width = 200;
             // 
             // customerBindingSource

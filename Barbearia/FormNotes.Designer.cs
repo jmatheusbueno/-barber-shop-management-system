@@ -82,8 +82,10 @@
             this.dataGridView1.DataSource = this.noteBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(17, 77);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(644, 332);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -91,6 +93,7 @@
             this.nameDataGridViewTextBoxColumn.FillWeight = 300F;
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 300;
             // 
             // dateDataGridViewTextBoxColumn1
@@ -98,18 +101,21 @@
             this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
             this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // startScheduleDataGridViewTextBoxColumn1
             // 
             this.startScheduleDataGridViewTextBoxColumn1.DataPropertyName = "StartSchedule";
             this.startScheduleDataGridViewTextBoxColumn1.HeaderText = "StartSchedule";
             this.startScheduleDataGridViewTextBoxColumn1.Name = "startScheduleDataGridViewTextBoxColumn1";
+            this.startScheduleDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // finalScheduleDataGridViewTextBoxColumn1
             // 
             this.finalScheduleDataGridViewTextBoxColumn1.DataPropertyName = "FinalSchedule";
             this.finalScheduleDataGridViewTextBoxColumn1.HeaderText = "FinalSchedule";
             this.finalScheduleDataGridViewTextBoxColumn1.Name = "finalScheduleDataGridViewTextBoxColumn1";
+            this.finalScheduleDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // noteBindingSource1
             // 

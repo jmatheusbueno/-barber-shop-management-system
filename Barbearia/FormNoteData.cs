@@ -26,6 +26,12 @@ namespace Barbearia
             Save(n as Note);
         }
 
+        private void FormNoteData_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'brutusDataSet2.customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.brutusDataSet2.customer);
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -63,12 +69,5 @@ namespace Barbearia
             this.Close();
         }
         #endregion
-
-        private void FormNoteData_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'brutusDataSet2.customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.brutusDataSet2.customer);
-
-        }
     }
 }
