@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.lblClientes = new System.Windows.Forms.Label();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.brutusDataSet = new Barbearia.BrutusDataSet();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customerTableAdapter = new Barbearia.BrutusDataSetTableAdapters.customerTableAdapter();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cellPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brutusDataSet = new Barbearia.BrutusDataSet();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.lblClientes = new System.Windows.Forms.Label();
+            this.pnlTitle = new System.Windows.Forms.Panel();
+            this.customerTableAdapter = new Barbearia.BrutusDataSetTableAdapters.customerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.pnlTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet)).BeginInit();
+            this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -62,49 +62,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(775, 339);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(713, 409);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 1;
-            this.btnNew.Text = "Novo";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // lblClientes
-            // 
-            this.lblClientes.AutoSize = true;
-            this.lblClientes.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.Location = new System.Drawing.Point(3, 10);
-            this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(88, 26);
-            this.lblClientes.TabIndex = 2;
-            this.lblClientes.Text = "Clientes";
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlTitle.Controls.Add(this.lblClientes);
-            this.pnlTitle.Location = new System.Drawing.Point(13, 13);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(775, 45);
-            this.pnlTitle.TabIndex = 3;
-            // 
-            // brutusDataSet
-            // 
-            this.brutusDataSet.DataSetName = "BrutusDataSet";
-            this.brutusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "customer";
-            this.customerBindingSource.DataSource = this.brutusDataSet;
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -140,6 +97,49 @@
             this.observationDataGridViewTextBoxColumn.Name = "observationDataGridViewTextBoxColumn";
             this.observationDataGridViewTextBoxColumn.Width = 200;
             // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "customer";
+            this.customerBindingSource.DataSource = this.brutusDataSet;
+            // 
+            // brutusDataSet
+            // 
+            this.brutusDataSet.DataSetName = "BrutusDataSet";
+            this.brutusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(713, 409);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 1;
+            this.btnNew.Text = "Novo";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // lblClientes
+            // 
+            this.lblClientes.AutoSize = true;
+            this.lblClientes.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.Location = new System.Drawing.Point(3, 10);
+            this.lblClientes.Name = "lblClientes";
+            this.lblClientes.Size = new System.Drawing.Size(88, 26);
+            this.lblClientes.TabIndex = 2;
+            this.lblClientes.Text = "Clientes";
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlTitle.Controls.Add(this.lblClientes);
+            this.pnlTitle.Location = new System.Drawing.Point(13, 13);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(775, 45);
+            this.pnlTitle.TabIndex = 3;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
             // FormListCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,10 +154,10 @@
             this.Text = "Clientes Cadastrados";
             this.Load += new System.EventHandler(this.FormListCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

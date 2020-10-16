@@ -65,7 +65,7 @@
             this.cboCustomer.Location = new System.Drawing.Point(71, 19);
             this.cboCustomer.Name = "cboCustomer";
             this.cboCustomer.Size = new System.Drawing.Size(478, 21);
-            this.cboCustomer.TabIndex = 3;
+            this.cboCustomer.TabIndex = 0;
             this.cboCustomer.ValueMember = "Name";
             // 
             // customerBindingSource
@@ -105,7 +105,7 @@
             this.btnCancel.Location = new System.Drawing.Point(474, 82);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 15;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -115,7 +115,7 @@
             this.btnSave.Location = new System.Drawing.Point(393, 82);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 14;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -125,14 +125,14 @@
             this.txtStartSchedule.Location = new System.Drawing.Point(278, 50);
             this.txtStartSchedule.Name = "txtStartSchedule";
             this.txtStartSchedule.Size = new System.Drawing.Size(62, 20);
-            this.txtStartSchedule.TabIndex = 16;
+            this.txtStartSchedule.TabIndex = 2;
             // 
             // txtFinalSchedule
             // 
             this.txtFinalSchedule.Location = new System.Drawing.Point(486, 50);
             this.txtFinalSchedule.Name = "txtFinalSchedule";
             this.txtFinalSchedule.Size = new System.Drawing.Size(63, 20);
-            this.txtFinalSchedule.TabIndex = 17;
+            this.txtFinalSchedule.TabIndex = 3;
             // 
             // lblData
             // 
@@ -150,7 +150,7 @@
             this.txtDate.Location = new System.Drawing.Point(71, 50);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(84, 20);
-            this.txtDate.TabIndex = 19;
+            this.txtDate.TabIndex = 1;
             // 
             // customerTableAdapter
             // 

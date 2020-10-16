@@ -32,6 +32,10 @@
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTile = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startScheduleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.finalScheduleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.brutusDataSet3 = new Barbearia.BrutusDataSet3();
             this.btnNew = new System.Windows.Forms.Button();
@@ -41,10 +45,6 @@
             this.startScheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.finalScheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteTableAdapter1 = new Barbearia.BrutusDataSet3TableAdapters.noteTableAdapter();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startScheduleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.finalScheduleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource1)).BeginInit();
@@ -83,7 +83,33 @@
             this.dataGridView1.Location = new System.Drawing.Point(17, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(644, 332);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 300F;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // dateDataGridViewTextBoxColumn1
+            // 
+            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            // 
+            // startScheduleDataGridViewTextBoxColumn1
+            // 
+            this.startScheduleDataGridViewTextBoxColumn1.DataPropertyName = "StartSchedule";
+            this.startScheduleDataGridViewTextBoxColumn1.HeaderText = "StartSchedule";
+            this.startScheduleDataGridViewTextBoxColumn1.Name = "startScheduleDataGridViewTextBoxColumn1";
+            // 
+            // finalScheduleDataGridViewTextBoxColumn1
+            // 
+            this.finalScheduleDataGridViewTextBoxColumn1.DataPropertyName = "FinalSchedule";
+            this.finalScheduleDataGridViewTextBoxColumn1.HeaderText = "FinalSchedule";
+            this.finalScheduleDataGridViewTextBoxColumn1.Name = "finalScheduleDataGridViewTextBoxColumn1";
             // 
             // noteBindingSource1
             // 
@@ -100,7 +126,7 @@
             this.btnNew.Location = new System.Drawing.Point(560, 415);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(101, 23);
-            this.btnNew.TabIndex = 2;
+            this.btnNew.TabIndex = 1;
             this.btnNew.Text = "Cadastrar Horário";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
@@ -136,32 +162,6 @@
             // noteTableAdapter1
             // 
             this.noteTableAdapter1.ClearBeforeFill = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.FillWeight = 300F;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // dateDataGridViewTextBoxColumn1
-            // 
-            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
-            // 
-            // startScheduleDataGridViewTextBoxColumn1
-            // 
-            this.startScheduleDataGridViewTextBoxColumn1.DataPropertyName = "StartSchedule";
-            this.startScheduleDataGridViewTextBoxColumn1.HeaderText = "StartSchedule";
-            this.startScheduleDataGridViewTextBoxColumn1.Name = "startScheduleDataGridViewTextBoxColumn1";
-            // 
-            // finalScheduleDataGridViewTextBoxColumn1
-            // 
-            this.finalScheduleDataGridViewTextBoxColumn1.DataPropertyName = "FinalSchedule";
-            this.finalScheduleDataGridViewTextBoxColumn1.HeaderText = "FinalSchedule";
-            this.finalScheduleDataGridViewTextBoxColumn1.Name = "finalScheduleDataGridViewTextBoxColumn1";
             // 
             // FormNotes
             // 

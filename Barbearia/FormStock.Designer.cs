@@ -32,19 +32,19 @@
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTile = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.formProductDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.brutusDataSet1 = new Barbearia.BrutusDataSet1();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productTableAdapter = new Barbearia.BrutusDataSet1TableAdapters.productTableAdapter();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brutusDataSet1 = new Barbearia.BrutusDataSet1();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.productTableAdapter = new Barbearia.BrutusDataSet1TableAdapters.productTableAdapter();
+            this.formProductDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formProductDataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formProductDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitle
@@ -84,35 +84,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(544, 314);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNew.Location = new System.Drawing.Point(455, 417);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(101, 23);
-            this.btnNew.TabIndex = 3;
-            this.btnNew.Text = "Cadastrar Produto";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // formProductDataBindingSource
-            // 
-            this.formProductDataBindingSource.DataSource = typeof(Barbearia.FormProductData);
-            // 
-            // brutusDataSet1
-            // 
-            this.brutusDataSet1.DataSetName = "BrutusDataSet1";
-            this.brutusDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "product";
-            this.productBindingSource.DataSource = this.brutusDataSet1;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -134,6 +106,35 @@
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "product";
+            this.productBindingSource.DataSource = this.brutusDataSet1;
+            // 
+            // brutusDataSet1
+            // 
+            this.brutusDataSet1.DataSetName = "BrutusDataSet1";
+            this.brutusDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNew.Location = new System.Drawing.Point(455, 417);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(101, 23);
+            this.btnNew.TabIndex = 3;
+            this.btnNew.Text = "Cadastrar Produto";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // formProductDataBindingSource
+            // 
+            this.formProductDataBindingSource.DataSource = typeof(Barbearia.FormProductData);
+            // 
             // FormStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,9 +151,9 @@
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formProductDataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formProductDataBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

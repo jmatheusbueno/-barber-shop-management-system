@@ -43,7 +43,7 @@
             this.btnCancel.Location = new System.Drawing.Point(288, 100);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 15;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -53,7 +53,7 @@
             this.btnSave.Location = new System.Drawing.Point(204, 100);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 14;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -63,7 +63,7 @@
             this.txtName.Location = new System.Drawing.Point(66, 19);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(297, 20);
-            this.txtName.TabIndex = 17;
+            this.txtName.TabIndex = 0;
             // 
             // lblName
             // 
@@ -81,7 +81,7 @@
             this.txtPrice.Location = new System.Drawing.Point(66, 52);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(118, 20);
-            this.txtPrice.TabIndex = 19;
+            this.txtPrice.TabIndex = 1;
             // 
             // lblPrice
             // 
@@ -99,7 +99,7 @@
             this.txtQuantity.Location = new System.Drawing.Point(288, 54);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(75, 20);
-            this.txtQuantity.TabIndex = 21;
+            this.txtQuantity.TabIndex = 2;
             // 
             // lblQuantity
             // 

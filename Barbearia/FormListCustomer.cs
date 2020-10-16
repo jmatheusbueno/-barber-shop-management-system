@@ -15,8 +15,10 @@ namespace Barbearia
         public FormListCustomer()
         {
             InitializeComponent();
+            AddColumns();
         }
 
+        #region Events
         private void btnNew_Click(object sender, EventArgs e)
         {
             FormCustomerData frm = new FormCustomerData();
@@ -27,5 +29,17 @@ namespace Barbearia
         {
             this.customerTableAdapter.Fill(this.brutusDataSet.customer);
         }
+        #endregion
+
+        #region Methods
+        private void AddColumns()
+        {
+            dataGridView1.Columns[0].HeaderText = "Cliente";
+            dataGridView1.Columns[1].HeaderText = "CPF";
+            dataGridView1.Columns[2].HeaderText = "Telefone";
+            dataGridView1.Columns[3].HeaderText = "Endereço";
+            dataGridView1.Columns[4].HeaderText = "Observações";
+        }
+        #endregion
     }
 }
