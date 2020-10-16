@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCustomer = new System.Windows.Forms.Label();
-            this.cbbCustomer = new System.Windows.Forms.ComboBox();
+            this.cboCustomer = new System.Windows.Forms.ComboBox();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brutusDataSet2 = new Barbearia.BrutusDataSet2();
             this.lblStartSchedule = new System.Windows.Forms.Label();
             this.lblFinalSchedule = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -37,7 +40,10 @@
             this.txtStartSchedule = new System.Windows.Forms.TextBox();
             this.txtFinalSchedule = new System.Windows.Forms.TextBox();
             this.lblData = new System.Windows.Forms.Label();
-            this.txtData = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.customerTableAdapter = new Barbearia.BrutusDataSet2TableAdapters.customerTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCustomer
@@ -51,13 +57,26 @@
             this.lblCustomer.TabIndex = 2;
             this.lblCustomer.Text = "Cliente:";
             // 
-            // cbbCustomer
+            // cboCustomer
             // 
-            this.cbbCustomer.FormattingEnabled = true;
-            this.cbbCustomer.Location = new System.Drawing.Point(71, 19);
-            this.cbbCustomer.Name = "cbbCustomer";
-            this.cbbCustomer.Size = new System.Drawing.Size(478, 21);
-            this.cbbCustomer.TabIndex = 3;
+            this.cboCustomer.DataSource = this.customerBindingSource;
+            this.cboCustomer.DisplayMember = "Name";
+            this.cboCustomer.FormattingEnabled = true;
+            this.cboCustomer.Location = new System.Drawing.Point(71, 19);
+            this.cboCustomer.Name = "cboCustomer";
+            this.cboCustomer.Size = new System.Drawing.Size(478, 21);
+            this.cboCustomer.TabIndex = 3;
+            this.cboCustomer.ValueMember = "Name";
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "customer";
+            this.customerBindingSource.DataSource = this.brutusDataSet2;
+            // 
+            // brutusDataSet2
+            // 
+            this.brutusDataSet2.DataSetName = "BrutusDataSet2";
+            this.brutusDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblStartSchedule
             // 
@@ -89,6 +108,7 @@
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -98,6 +118,7 @@
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtStartSchedule
             // 
@@ -124,12 +145,16 @@
             this.lblData.TabIndex = 18;
             this.lblData.Text = "Data:";
             // 
-            // txtData
+            // txtDate
             // 
-            this.txtData.Location = new System.Drawing.Point(71, 50);
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(84, 20);
-            this.txtData.TabIndex = 19;
+            this.txtDate.Location = new System.Drawing.Point(71, 50);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(84, 20);
+            this.txtDate.TabIndex = 19;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
             // 
             // FormNoteData
             // 
@@ -137,7 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(561, 117);
-            this.Controls.Add(this.txtData);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.txtFinalSchedule);
             this.Controls.Add(this.txtStartSchedule);
@@ -145,11 +170,14 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblFinalSchedule);
             this.Controls.Add(this.lblStartSchedule);
-            this.Controls.Add(this.cbbCustomer);
+            this.Controls.Add(this.cboCustomer);
             this.Controls.Add(this.lblCustomer);
             this.Name = "FormNoteData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agendar Horário";
+            this.Load += new System.EventHandler(this.FormNoteData_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,7 +186,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblCustomer;
-        private System.Windows.Forms.ComboBox cbbCustomer;
+        private System.Windows.Forms.ComboBox cboCustomer;
         private System.Windows.Forms.Label lblStartSchedule;
         private System.Windows.Forms.Label lblFinalSchedule;
         private System.Windows.Forms.Button btnCancel;
@@ -166,6 +194,9 @@
         private System.Windows.Forms.TextBox txtStartSchedule;
         private System.Windows.Forms.TextBox txtFinalSchedule;
         private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.TextBox txtData;
+        private System.Windows.Forms.TextBox txtDate;
+        private BrutusDataSet2 brutusDataSet2;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private BrutusDataSet2TableAdapters.customerTableAdapter customerTableAdapter;
     }
 }
