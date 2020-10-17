@@ -39,7 +39,7 @@ namespace Barbearia
             Product p = new Product();
             p.Name = txtName.Text;
             p.Price = float.Parse(txtPrice.Text, CultureInfo.InvariantCulture.NumberFormat);
-            p.Quantity = Convert.ToInt32(txtQuantity.Text);
+            p.Quantity = int.Parse(txtQuantity.Text);
             return p;
         }
 

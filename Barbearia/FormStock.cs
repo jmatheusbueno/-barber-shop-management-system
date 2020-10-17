@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,8 @@ namespace Barbearia
 
         private void FormStock_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'brutusDataSet6.product' table. You can move, or remove it, as needed.
+            this.productTableAdapter1.Fill(this.brutusDataSet6.product);
             // TODO: This line of code loads data into the 'brutusDataSet1.product' table. You can move, or remove it, as needed.
             this.productTableAdapter.Fill(this.brutusDataSet1.product);
         }
@@ -42,28 +45,44 @@ namespace Barbearia
             if (dataGridView1.SelectedRows.Count == 1)
                 Fill();
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+                Remove();
+        }
         #endregion
 
         #region Methods
         private void AddColumns()
         {
-            dataGridView1.Columns[0].HeaderText = "Produto";
-            dataGridView1.Columns[1].HeaderText = "Quantidade";
-            dataGridView1.Columns[2].HeaderText = "Preço";
+            dataGridView1.Columns[1].HeaderText = "Produto";
+            dataGridView1.Columns[2].HeaderText = "Quantidade";
+            dataGridView1.Columns[3].HeaderText = "Preço";
         }
 
         private void Fill()
         {
             Product product = new Product();
-            product.Name = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            product.Price = float.Parse(dataGridView1.SelectedRows[0].Cells[1].Value.ToString());
-            product.Quantity = int.Parse(dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
+            product.Name = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            product.Price = float.Parse(dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
+            product.Quantity = int.Parse(dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
 
             FormProductData frm = new FormProductData();
             frm.FillForm(product.Name, product.Price, product.Quantity);
             frm.Show();
         }
-        #endregion
 
+        private void Remove()
+        {
+            var id = Int32.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            Db db = new Db();
+            SqlCommand deleteCommand = new SqlCommand("delete from product where id = @id");
+            deleteCommand.Parameters.AddWithValue("@id", id);
+
+            db.executeQuery(deleteCommand);
+            MessageBox.Show("Produto removido com sucesso", "Remover", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
     }
 }
