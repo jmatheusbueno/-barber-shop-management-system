@@ -31,14 +31,12 @@ namespace Barbearia
         {
             // TODO: This line of code loads data into the 'brutusDataSet6.product' table. You can move, or remove it, as needed.
             this.productTableAdapter1.Fill(this.brutusDataSet6.product);
-            // TODO: This line of code loads data into the 'brutusDataSet1.product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.brutusDataSet1.product);
         }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5)
-                this.productTableAdapter.Fill(this.brutusDataSet1.product);
+                this.productTableAdapter1.Fill(this.brutusDataSet6.product);
         }
         private void btnView_Click(object sender, EventArgs e)
         {
