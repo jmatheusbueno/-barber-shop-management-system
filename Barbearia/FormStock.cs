@@ -38,13 +38,14 @@ namespace Barbearia
             if (e.KeyCode == Keys.F5)
                 this.productTableAdapter1.Fill(this.brutusDataSet6.product);
         }
-        private void btnView_Click(object sender, EventArgs e)
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
                 Fill();
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        private void removerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
                 Remove();
@@ -63,8 +64,8 @@ namespace Barbearia
         {
             Product product = new Product();
             product.Name = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            product.Price = float.Parse(dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
-            product.Quantity = int.Parse(dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
+            product.Quantity = int.Parse(dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
+            product.Price = float.Parse(dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
 
             FormProductData frm = new FormProductData();
             frm.FillForm(product.Name, product.Price, product.Quantity);
