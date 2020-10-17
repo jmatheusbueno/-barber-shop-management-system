@@ -32,10 +32,13 @@
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTile = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startScheduleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.finalScheduleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.brutusDataSet7 = new Barbearia.BrutusDataSet7();
             this.noteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.brutusDataSet3 = new Barbearia.BrutusDataSet3();
             this.btnNew = new System.Windows.Forms.Button();
@@ -45,12 +48,18 @@
             this.startScheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.finalScheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteTableAdapter1 = new Barbearia.BrutusDataSet3TableAdapters.noteTableAdapter();
-            this.btnView = new System.Windows.Forms.Button();
+            this.noteTableAdapter = new Barbearia.BrutusDataSet7TableAdapters.noteTableAdapter();
+            this.cmsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource)).BeginInit();
+            this.cmsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTitle
@@ -76,11 +85,12 @@
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn1,
             this.startScheduleDataGridViewTextBoxColumn1,
             this.finalScheduleDataGridViewTextBoxColumn1});
-            this.dataGridView1.DataSource = this.noteBindingSource1;
+            this.dataGridView1.DataSource = this.noteBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(17, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -88,6 +98,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(644, 332);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -119,6 +137,16 @@
             this.finalScheduleDataGridViewTextBoxColumn1.Name = "finalScheduleDataGridViewTextBoxColumn1";
             this.finalScheduleDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
+            // noteBindingSource2
+            // 
+            this.noteBindingSource2.DataMember = "note";
+            this.noteBindingSource2.DataSource = this.brutusDataSet7;
+            // 
+            // brutusDataSet7
+            // 
+            this.brutusDataSet7.DataSetName = "BrutusDataSet7";
+            this.brutusDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // noteBindingSource1
             // 
             this.noteBindingSource1.DataMember = "note";
@@ -131,7 +159,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(453, 415);
+            this.btnNew.Location = new System.Drawing.Point(560, 415);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(101, 23);
             this.btnNew.TabIndex = 1;
@@ -171,15 +199,31 @@
             // 
             this.noteTableAdapter1.ClearBeforeFill = true;
             // 
-            // btnView
+            // noteTableAdapter
             // 
-            this.btnView.Location = new System.Drawing.Point(560, 415);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(101, 23);
-            this.btnView.TabIndex = 2;
-            this.btnView.Text = "Visualizar";
-            this.btnView.UseVisualStyleBackColor = true;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            this.noteTableAdapter.ClearBeforeFill = true;
+            // 
+            // cmsMenu
+            // 
+            this.cmsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removerToolStripMenuItem,
+            this.visualizarToolStripMenuItem});
+            this.cmsMenu.Name = "cmsMenu";
+            this.cmsMenu.Size = new System.Drawing.Size(124, 48);
+            // 
+            // removerToolStripMenuItem
+            // 
+            this.removerToolStripMenuItem.Name = "removerToolStripMenuItem";
+            this.removerToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.removerToolStripMenuItem.Text = "Remover";
+            this.removerToolStripMenuItem.Click += new System.EventHandler(this.removerToolStripMenuItem_Click);
+            // 
+            // visualizarToolStripMenuItem
+            // 
+            this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.visualizarToolStripMenuItem.Text = "Visualizar";
+            this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.visualizarToolStripMenuItem_Click);
             // 
             // FormNotes
             // 
@@ -187,7 +231,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(673, 444);
-            this.Controls.Add(this.btnView);
+            this.ContextMenuStrip = this.cmsMenu;
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlTitle);
@@ -198,9 +242,12 @@
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource)).EndInit();
+            this.cmsMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -219,10 +266,16 @@
         private BrutusDataSet3 brutusDataSet3;
         private System.Windows.Forms.BindingSource noteBindingSource1;
         private BrutusDataSet3TableAdapters.noteTableAdapter noteTableAdapter1;
+        private BrutusDataSet7 brutusDataSet7;
+        private System.Windows.Forms.BindingSource noteBindingSource2;
+        private BrutusDataSet7TableAdapters.noteTableAdapter noteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn startScheduleDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn finalScheduleDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.ContextMenuStrip cmsMenu;
+        private System.Windows.Forms.ToolStripMenuItem removerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
     }
 }
