@@ -34,6 +34,7 @@
             this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cellPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brutusDataSet = new Barbearia.BrutusDataSet();
@@ -41,10 +42,13 @@
             this.lblClientes = new System.Windows.Forms.Label();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.customerTableAdapter = new Barbearia.BrutusDataSetTableAdapters.customerTableAdapter();
+            this.btnView = new System.Windows.Forms.Button();
+            this.brutusDataSet5 = new Barbearia.BrutusDataSet5();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet)).BeginInit();
             this.pnlTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -56,12 +60,14 @@
             this.cPFDataGridViewTextBoxColumn,
             this.cellPhoneDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
+            this.Address_Number,
             this.observationDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.customerBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 64);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(775, 339);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(875, 339);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
@@ -95,6 +101,13 @@
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // Address_Number
+            // 
+            this.Address_Number.DataPropertyName = "Address_Number";
+            this.Address_Number.HeaderText = "Address_Number";
+            this.Address_Number.Name = "Address_Number";
+            this.Address_Number.ReadOnly = true;
+            // 
             // observationDataGridViewTextBoxColumn
             // 
             this.observationDataGridViewTextBoxColumn.DataPropertyName = "Observation";
@@ -116,7 +129,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(713, 409);
+            this.btnNew.Location = new System.Drawing.Point(732, 409);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
             this.btnNew.TabIndex = 1;
@@ -140,19 +153,35 @@
             this.pnlTitle.Controls.Add(this.lblClientes);
             this.pnlTitle.Location = new System.Drawing.Point(13, 13);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(775, 45);
+            this.pnlTitle.Size = new System.Drawing.Size(875, 45);
             this.pnlTitle.TabIndex = 3;
             // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(813, 409);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(75, 23);
+            this.btnView.TabIndex = 4;
+            this.btnView.Text = "Visualizar";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // brutusDataSet5
+            // 
+            this.brutusDataSet5.DataSetName = "BrutusDataSet5";
+            this.brutusDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // FormListCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(800, 444);
+            this.ClientSize = new System.Drawing.Size(900, 444);
+            this.Controls.Add(this.btnView);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.dataGridView1);
@@ -165,6 +194,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,10 +208,13 @@
         private BrutusDataSet brutusDataSet;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private BrutusDataSetTableAdapters.customerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.Button btnView;
+        private BrutusDataSet5 brutusDataSet5;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPFDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cellPhoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn observationDataGridViewTextBoxColumn;
     }
 }

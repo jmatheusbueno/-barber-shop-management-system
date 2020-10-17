@@ -51,6 +51,23 @@ namespace Barbearia
             return n;
         }
 
+        public void FillForm(string customer, DateTime date, string startschedule, string finalschedule)
+        {
+            cboCustomer.Enabled = false;
+            lblCustomerName.Visible = true;
+            lblCustomerName.Text = customer;
+            txtDate.Text = date.ToString();
+            txtStartSchedule.Text = startschedule;
+            txtFinalSchedule.Text = finalschedule;
+
+            txtDate.ReadOnly = true;
+            txtStartSchedule.ReadOnly = true;
+            txtFinalSchedule.ReadOnly = true;
+
+            btnSave.Enabled = false;
+            btnCancel.Text = "Fechar";
+        }
+
         private void Save(Note obj)
         {
             Db db = new Db();

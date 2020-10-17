@@ -66,6 +66,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BrutusDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BrutusDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrutusDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BrutusDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrutusDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="object classes\Customer.cs" />
     <Compile Include="Db.cs" />
     <Compile Include="FormCustomerData.cs">
@@ -196,6 +206,28 @@
     </None>
     <None Include="BrutusDataSet3.xss">
       <DependentUpon>BrutusDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BrutusDataSet4.xsc">
+      <DependentUpon>BrutusDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BrutusDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BrutusDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrutusDataSet4.xss">
+      <DependentUpon>BrutusDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BrutusDataSet5.xsc">
+      <DependentUpon>BrutusDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BrutusDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BrutusDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrutusDataSet5.xss">
+      <DependentUpon>BrutusDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\FormProductData.datasource" />
     <None Include="Properties\Settings.settings">

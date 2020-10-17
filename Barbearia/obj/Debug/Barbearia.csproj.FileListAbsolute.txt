@@ -23,8 +23,8 @@ C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia
 C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\obj\Debug\Barbearia.FormStock.resources
 C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\obj\Debug\Barbearia.Properties.Resources.resources
 C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\obj\Debug\Barbearia.csproj.GenerateResource.cache
-C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\obj\Debug\Barbearia.exe
-C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\obj\Debug\Barbearia.pdb
 C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\bin\Debug\Barbearia.exe.config
 C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\bin\Debug\Barbearia.exe
 C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\bin\Debug\Barbearia.pdb
+C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\obj\Debug\Barbearia.exe
+C:\Users\joao.bueno\Desktop\barber shop\-barber-shop-management-system\Barbearia\obj\Debug\Barbearia.pdb

@@ -42,6 +42,7 @@
             this.lblData = new System.Windows.Forms.Label();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.customerTableAdapter = new Barbearia.BrutusDataSet2TableAdapters.customerTableAdapter();
+            this.lblCustomerName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brutusDataSet2)).BeginInit();
             this.SuspendLayout();
@@ -156,12 +157,24 @@
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Enabled = false;
+            this.lblCustomerName.Location = new System.Drawing.Point(73, 23);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(82, 13);
+            this.lblCustomerName.TabIndex = 19;
+            this.lblCustomerName.Text = "Customer Name";
+            this.lblCustomerName.Visible = false;
+            // 
             // FormNoteData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(561, 117);
+            this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.txtFinalSchedule);
@@ -198,5 +211,6 @@
         private BrutusDataSet2 brutusDataSet2;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private BrutusDataSet2TableAdapters.customerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.Label lblCustomerName;
     }
 }

@@ -43,6 +43,20 @@ namespace Barbearia
             return p;
         }
 
+        public void FillForm(string name, float price, int quantity)
+        {
+            txtName.Text = name;
+            txtPrice.Text = price.ToString();
+            txtQuantity.Text = quantity.ToString();
+
+            txtName.ReadOnly = true;
+            txtPrice.ReadOnly = true;
+            txtQuantity.ReadOnly = true;
+
+            btnSave.Enabled = false;
+            btnCancel.Text = "Fechar";
+        }
+
         private void Save(Product obj)
         {
             Db db = new Db();
