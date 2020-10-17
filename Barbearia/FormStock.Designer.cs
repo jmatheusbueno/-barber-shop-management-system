@@ -40,6 +40,7 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.productTableAdapter = new Barbearia.BrutusDataSet1TableAdapters.productTableAdapter();
             this.formProductDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnView = new System.Windows.Forms.Button();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -53,7 +54,7 @@
             this.pnlTitle.Controls.Add(this.lblTile);
             this.pnlTitle.Location = new System.Drawing.Point(0, 1);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(802, 72);
+            this.pnlTitle.Size = new System.Drawing.Size(578, 72);
             this.pnlTitle.TabIndex = 1;
             // 
             // lblTile
@@ -83,6 +84,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 97);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(544, 314);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
@@ -123,7 +125,7 @@
             // btnNew
             // 
             this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNew.Location = new System.Drawing.Point(455, 417);
+            this.btnNew.Location = new System.Drawing.Point(348, 415);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(101, 23);
             this.btnNew.TabIndex = 3;
@@ -139,12 +141,24 @@
             // 
             this.formProductDataBindingSource.DataSource = typeof(Barbearia.FormProductData);
             // 
+            // btnView
+            // 
+            this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnView.Location = new System.Drawing.Point(455, 415);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(101, 23);
+            this.btnView.TabIndex = 4;
+            this.btnView.Text = "Visualizar";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
             // FormStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(576, 450);
+            this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlTitle);
@@ -175,5 +189,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnView;
     }
 }

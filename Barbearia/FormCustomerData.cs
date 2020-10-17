@@ -75,6 +75,26 @@ namespace Barbearia
             return c;
         }
 
+        public void FillForm(string name, string cpf, string cellphone, string address, string address_number,string observation)
+        {
+            txtName.Text = name;
+            txtCPF.Text = cpf;
+            txtCellPhone.Text = cellphone;
+            txtAdress.Text = address;
+            txtAdressNumber.Text = address_number;
+            txtObservation.Text = observation;
+
+            txtName.ReadOnly = true;
+            txtCPF.ReadOnly = true;
+            txtCellPhone.ReadOnly = true;
+            txtAdress.ReadOnly = true;
+            txtAdressNumber.ReadOnly = true;
+            txtObservation.ReadOnly = true;
+
+            btnSave.Enabled = false;
+            btnCancel.Text = "Fechar";
+        }
+
         private void Save(Customer obj)
         {
             Db db = new Db();

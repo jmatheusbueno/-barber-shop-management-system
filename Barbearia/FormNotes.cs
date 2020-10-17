@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Barbearia.object_classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,11 @@ namespace Barbearia
             if (e.KeyCode == Keys.F5)
                 this.noteTableAdapter1.Fill(this.brutusDataSet3.note);
         }
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+                Fill();
+        }
         #endregion
 
         #region Methods
@@ -46,6 +52,21 @@ namespace Barbearia
             dataGridView1.Columns[2].HeaderText = "Horário de início";
             dataGridView1.Columns[3].HeaderText = "Horário de término";
         }
+
+        private void Fill()
+        {
+            Note note = new Note();
+            note.CustomerName = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            var date = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            note.Date = Convert.ToDateTime(date);
+            note.StartSchedule = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            note.FinalSchedule = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+
+            FormNoteData frm = new FormNoteData();
+            frm.FillForm(note.CustomerName, note.Date, note.StartSchedule, note.FinalSchedule);
+            frm.Show();
+        }
         #endregion
+
     }
 }

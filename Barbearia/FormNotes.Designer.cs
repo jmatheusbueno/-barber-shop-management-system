@@ -45,6 +45,7 @@
             this.startScheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.finalScheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteTableAdapter1 = new Barbearia.BrutusDataSet3TableAdapters.noteTableAdapter();
+            this.btnView = new System.Windows.Forms.Button();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource1)).BeginInit();
@@ -83,6 +84,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(17, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(644, 332);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
@@ -129,7 +131,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(560, 415);
+            this.btnNew.Location = new System.Drawing.Point(453, 415);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(101, 23);
             this.btnNew.TabIndex = 1;
@@ -169,12 +171,23 @@
             // 
             this.noteTableAdapter1.ClearBeforeFill = true;
             // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(560, 415);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(101, 23);
+            this.btnView.TabIndex = 2;
+            this.btnView.Text = "Visualizar";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
             // FormNotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(673, 444);
+            this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlTitle);
@@ -210,5 +223,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn startScheduleDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn finalScheduleDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button btnView;
     }
 }

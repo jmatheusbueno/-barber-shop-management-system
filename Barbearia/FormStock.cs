@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Barbearia.object_classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,11 @@ namespace Barbearia
             if (e.KeyCode == Keys.F5)
                 this.productTableAdapter.Fill(this.brutusDataSet1.product);
         }
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+                Fill();
+        }
         #endregion
 
         #region Methods
@@ -45,6 +51,19 @@ namespace Barbearia
             dataGridView1.Columns[1].HeaderText = "Quantidade";
             dataGridView1.Columns[2].HeaderText = "Preço";
         }
+
+        private void Fill()
+        {
+            Product product = new Product();
+            product.Name = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            product.Price = float.Parse(dataGridView1.SelectedRows[0].Cells[1].Value.ToString());
+            product.Quantity = int.Parse(dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
+
+            FormProductData frm = new FormProductData();
+            frm.FillForm(product.Name, product.Price, product.Quantity);
+            frm.Show();
+        }
         #endregion
+
     }
 }
