@@ -15,6 +15,7 @@ namespace Barbearia
 {
     public partial class FormCustomerData : Form
     {
+        public bool Edit { get; set; }
         public FormCustomerChoice FrmCustomerChoice { get; set; }
         public FormCustomerData()
         {
@@ -84,15 +85,20 @@ namespace Barbearia
             txtAdressNumber.Text = address_number;
             txtObservation.Text = observation;
 
-            txtName.ReadOnly = true;
-            txtCPF.ReadOnly = true;
-            txtCellPhone.ReadOnly = true;
-            txtAdress.ReadOnly = true;
-            txtAdressNumber.ReadOnly = true;
-            txtObservation.ReadOnly = true;
+            if (!Edit)
+            {
+                txtName.ReadOnly = true;
+                txtCPF.ReadOnly = true;
+                txtCellPhone.ReadOnly = true;
+                txtAdress.ReadOnly = true;
+                txtAdressNumber.ReadOnly = true;
+                txtObservation.ReadOnly = true;
 
-            btnSave.Enabled = false;
-            btnCancel.Text = "Fechar";
+                btnSave.Enabled = false;
+                btnCancel.Text = "Fechar";
+                return;
+            }
+            btnSave.Text = "Editar";
         }
 
         private void Save(Customer obj)

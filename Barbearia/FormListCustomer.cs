@@ -47,6 +47,17 @@ namespace Barbearia
             if (dataGridView1.SelectedRows.Count == 1)
                 Remove();
         }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+                Edit();
+        }
+
+        private void atualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.customerTableAdapter1.Fill(this.brutusDataSet8.customer);
+        }
         #endregion
 
         #region Methods
@@ -73,7 +84,6 @@ namespace Barbearia
             FormCustomerData frm = new FormCustomerData();
             frm.FillForm(customer.Name, customer.CPF, customer.Cell_Phone, customer.Address, customer.Address_Number, customer.Observation);
             frm.Show();
-
         }
 
         private void Remove()
@@ -86,8 +96,28 @@ namespace Barbearia
             db.executeQuery(deleteCommand);
             MessageBox.Show("Cliente removido com sucesso", "Remover", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void Edit()
+        {
+            Customer customer = new Customer();
+            customer.Name = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            customer.CPF = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            customer.Cell_Phone = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            customer.Address = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            customer.Address_Number = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            customer.Observation = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+
+            FormCustomerData frm = new FormCustomerData() { Edit = true };
+            frm.FillForm(customer.Name, customer.CPF, customer.Cell_Phone, customer.Address, customer.Address_Number, customer.Observation);
+            if (frm.ShowDialog() != DialogResult.None)
+            {
+                var id = Int32.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                Db db = new Db();
+                SqlCommand deleteCommand = new SqlCommand("delete from customer where id = @id");
+                deleteCommand.Parameters.AddWithValue("@id", id);
+                db.executeQuery(deleteCommand);
+            }
+        }
         #endregion
-
-
     }
 }

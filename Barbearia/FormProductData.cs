@@ -15,6 +15,7 @@ namespace Barbearia
 {
     public partial class FormProductData : Form
     {
+        public bool Edit { get; set; }
         public FormProductData()
         {
             InitializeComponent();
@@ -49,12 +50,17 @@ namespace Barbearia
             txtPrice.Text = price.ToString();
             txtQuantity.Text = quantity.ToString();
 
-            txtName.ReadOnly = true;
-            txtPrice.ReadOnly = true;
-            txtQuantity.ReadOnly = true;
+            if (!Edit)
+            {
+                txtName.ReadOnly = true;
+                txtPrice.ReadOnly = true;
+                txtQuantity.ReadOnly = true;
 
-            btnSave.Enabled = false;
-            btnCancel.Text = "Fechar";
+                btnSave.Enabled = false;
+                btnCancel.Text = "Fechar";
+                return;
+            }
+            btnSave.Text = "Editar";
         }
 
         private void Save(Product obj)
