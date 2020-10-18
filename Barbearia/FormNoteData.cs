@@ -14,6 +14,7 @@ namespace Barbearia
 {
     public partial class FormNoteData : Form
     {
+        public bool Edit { get; set; }
         public FormNoteData()
         {
             InitializeComponent();
@@ -59,13 +60,17 @@ namespace Barbearia
             txtDate.Text = date.ToString();
             txtStartSchedule.Text = startschedule;
             txtFinalSchedule.Text = finalschedule;
+            if (!Edit)
+            {
+                txtDate.ReadOnly = true;
+                txtStartSchedule.ReadOnly = true;
+                txtFinalSchedule.ReadOnly = true;
 
-            txtDate.ReadOnly = true;
-            txtStartSchedule.ReadOnly = true;
-            txtFinalSchedule.ReadOnly = true;
-
-            btnSave.Enabled = false;
-            btnCancel.Text = "Fechar";
+                btnSave.Enabled = false;
+                btnCancel.Text = "Fechar";
+                return;
+            }
+            btnSave.Text = "Editar";
         }
 
         private void Save(Note obj)

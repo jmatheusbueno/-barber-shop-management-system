@@ -44,10 +44,22 @@ namespace Barbearia
             if (dataGridView1.SelectedRows.Count == 1)
                 Fill();
         }
+
         private void removerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
                 Remove();
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+                Edit();
+        }
+
+        private void atualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.noteTableAdapter.Fill(this.brutusDataSet7.note);
         }
         #endregion
 
@@ -84,7 +96,28 @@ namespace Barbearia
             db.executeQuery(deleteCommand);
             MessageBox.Show("Horário removido com sucesso", "Remover", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
 
+        private void Edit()
+        {
+            Note note = new Note();
+            note.CustomerName = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            var date = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            note.Date = Convert.ToDateTime(date);
+            note.StartSchedule = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            note.FinalSchedule = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+
+            FormNoteData frm = new FormNoteData() { Edit = true };
+            frm.FillForm(note.CustomerName, note.Date, note.StartSchedule, note.FinalSchedule);
+            if (frm.ShowDialog() != DialogResult.None)
+            {
+                var id = Int32.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                Db db = new Db();
+                SqlCommand deleteCommand = new SqlCommand("delete from note where id = @id");
+                deleteCommand.Parameters.AddWithValue("@id", id);
+
+                db.executeQuery(deleteCommand);
+            }
+        }
+        #endregion
     }
 }
